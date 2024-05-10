@@ -5,10 +5,12 @@
 
 class EscudoAgua : public ArmaDefesa
 {
+
     public:
         EscudoAgua(string descricaoArma, int resistencia);
         string getDescricaoArma();
         int getResistencia();
+
 };
 
 
