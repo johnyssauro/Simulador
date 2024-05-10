@@ -1,7 +1,6 @@
 #ifndef ESCUDO
 #define ESCUDO
 
-#include "../core-simulador-hpp/ArmaAtaque.hpp"
 #include "../core-simulador-hpp/ArmaDefesa.hpp"
 class Escudo : public ArmaDefesa
 {
