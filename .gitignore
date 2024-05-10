@@ -1,0 +1,5 @@
+#Ignoring files with:
+
+*.o
+*.exe
+*.vscode
