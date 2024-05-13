@@ -55,9 +55,12 @@ int main()
 
     Simulador* simulador = new Simulador();
     simulador->adicionarPersonagem(p1, 1);
-    simulador->adicionarPersonagem(p2, 2);
+    simulador->adicionarPersonagem(p2, 1);
     simulador->adicionarPersonagem(p3, 1);
-    simulador->adicionarPersonagem(p4, 2);
+    simulador->adicionarPersonagem(p4, 1);
+    simulador->adicionarPersonagem(p5, 2);
+    simulador->adicionarPersonagem(p6, 2);
+    simulador->adicionarPersonagem(p7, 2);
     
     simulador->iniciarSimulacao();
 
