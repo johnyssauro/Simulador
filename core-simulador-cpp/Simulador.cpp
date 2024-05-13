@@ -1,12 +1,12 @@
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 #include <iostream>
 #include "../core-simulador-hpp/Simulador.hpp"
 #include "../core-simulador-hpp/Personagem.hpp"
 
 using std::cout;
 using std::endl;
-
 
 
 bool Simulador::adicionarPersonagem(Personagem* personagem, int equipe)
@@ -75,16 +75,21 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
         return nullptr;
     }
 
-    int contador = 0;
-    while (contador < tamanho)
-    {
-        if (equipe[contador]->getVida()>0)
-        {
-            return equipe[contador];
-        }
-        contador++;
+    int equipeAtual = (equipe == equipe1) ? 1 : 2;
 
-    }
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    while(calcularVidaEquipe(equipeAtual) > 0) {
+
+        int randomico = std::rand() % tamanho;
+        
+        if (equipe[randomico]->getVida()>0)
+        {
+
+            Sleep(1000);
+            return equipe[randomico];
+        }
+
+    } 
 
     return nullptr;
 }

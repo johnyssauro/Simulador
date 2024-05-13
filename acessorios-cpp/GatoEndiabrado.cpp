@@ -10,7 +10,7 @@ GatoEndiabrado::GatoEndiabrado(string descricaoArma, int minForca, int maxForca)
 int GatoEndiabrado::gerarForcaAtaque()
 {
 
-    return minForca - maxForca;
+    return maxForca - minForca;
 
 }
 
