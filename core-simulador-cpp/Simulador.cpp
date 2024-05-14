@@ -69,6 +69,8 @@ int Simulador::calcularVidaEquipe(int seletorDeEquipe)
 
 Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
 {
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
     int tamanho = equipe.size();
     if (tamanho == 0)
     {
@@ -77,15 +79,12 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
 
     int equipeAtual = (equipe == equipe1) ? 1 : 2;
 
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
     while(calcularVidaEquipe(equipeAtual) > 0) {
 
         int randomico = std::rand() % tamanho;
         
         if (equipe[randomico]->getVida()>0)
         {
-
-            Sleep(1000);
             return equipe[randomico];
         }
 
